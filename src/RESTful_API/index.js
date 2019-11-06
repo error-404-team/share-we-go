@@ -8,14 +8,14 @@ export const post = {
     users: {
         user: function (id, data, date) {
 
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/users/${id}/user`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/users/${id}/user`, {
                 mode: 'no-cors',
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
             });
 
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/users/${id}/_log/user`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/users/${id}/_log/user`, {
                 mode: 'no-cors',
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
@@ -41,14 +41,14 @@ export const post = {
                 timestamp: data.timestamp
             }
 
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/users/${id}/location`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/users/${id}/location`, {
                 mode: 'no-cors',
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data_location)
             });
 
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/users/${id}/_log/location`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/users/${id}/_log/location`, {
                 mode: 'no-cors',
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
@@ -61,14 +61,14 @@ export const post = {
         },
         profile: function (id, data, date) {
 
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/users/${id}/profile`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/users/${id}/profile`, {
                 mode: 'no-cors',
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
             });
 
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/users/${id}/_log/profile`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/users/${id}/_log/profile`, {
                 mode: 'no-cors',
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
@@ -82,14 +82,14 @@ export const post = {
     },
     share: {
         location: function (id, data, date) {
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/share/${id}/location`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/share/${id}/location`, {
                 mode: 'no-cors',
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
             });
 
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/share/${id}/_log/location`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/share/${id}/_log/location`, {
                 mode: 'no-cors',
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
@@ -100,14 +100,14 @@ export const post = {
             });
         },
         date: function (id, data, date) {
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/share/${id}/date`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/share/${id}/date`, {
                 mode: 'no-cors',
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
             });
 
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/share/${id}/_log/date`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/share/${id}/_log/date`, {
                 mode: 'no-cors',
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
@@ -118,14 +118,14 @@ export const post = {
             });
         },
         max_number: function (id, data, date) {
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/share/${id}/max_number`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/share/${id}/max_number`, {
                 mode: 'no-cors',
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
             });
 
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/share/${id}/_log/max_number`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/share/${id}/_log/max_number`, {
                 mode: 'no-cors',
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
@@ -136,14 +136,14 @@ export const post = {
             });
         },
         sex: function (id, data, date) {
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/share/${id}/sex`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/share/${id}/sex`, {
                 mode: 'no-cors',
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
             });
 
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/share/${id}/_log/sex`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/share/${id}/_log/sex`, {
                 mode: 'no-cors',
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
@@ -154,14 +154,14 @@ export const post = {
             });
         },
         owner: function (id, data, date) {
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/share/${id}/owner`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/share/${id}/owner`, {
                 mode: 'no-cors',
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
             });
 
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/share/${id}/_log/owner`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/share/${id}/_log/owner`, {
                 mode: 'no-cors',
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
@@ -172,14 +172,14 @@ export const post = {
             });
         },
         member: function (id, data, date) {
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/share/${id}/member`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/share/${id}/member`, {
                 mode: 'no-cors',
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
             });
 
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/share/${id}/_log/member`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/share/${id}/_log/member`, {
                 mode: 'no-cors',
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
@@ -190,14 +190,14 @@ export const post = {
             });
         },
         alert: function (id, data, date) {
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/share/${id}/alert`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/share/${id}/alert`, {
                 mode: 'no-cors',
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
             });
 
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/share/${id}/_log/alert`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/share/${id}/_log/alert`, {
                 mode: 'no-cors',
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
@@ -208,14 +208,14 @@ export const post = {
             });
         },
         chat: function (id, data, date) {
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/share/${id}/chat`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/share/${id}/chat`, {
                 mode: 'no-cors',
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
             });
 
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/share/${id}/_log/chat`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/share/${id}/_log/chat`, {
                 mode: 'no-cors',
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
@@ -228,14 +228,14 @@ export const post = {
     },
     status: {
         process: function (id, data, date) {
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/status/${id}/process`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/status/${id}/process`, {
                 mode: 'no-cors',
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
             });
 
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/status/${id}/_log/process`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/status/${id}/_log/process`, {
                 mode: 'no-cors',
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
@@ -246,14 +246,14 @@ export const post = {
             });
         },
         share: function (id, data, date) {
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/status/${id}/share`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/status/${id}/share`, {
                 mode: 'no-cors',
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
             });
 
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/status/${id}/_log/share`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/status/${id}/_log/share`, {
                 mode: 'no-cors',
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
@@ -264,14 +264,14 @@ export const post = {
             });
         },
         owner: function (id, data, date) {
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/status/${id}/owner`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/status/${id}/owner`, {
                 mode: 'no-cors',
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
             });
 
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/status/${id}/_log/owner`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/status/${id}/_log/owner`, {
                 mode: 'no-cors',
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
@@ -282,14 +282,14 @@ export const post = {
             });
         },
         member: function (id, data, date) {
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/status/${id}/member`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/status/${id}/member`, {
                 mode: 'no-cors',
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
             });
 
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/status/${id}/_log/member`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/status/${id}/_log/member`, {
                 mode: 'no-cors',
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
@@ -300,14 +300,14 @@ export const post = {
             });
         },
         alert: function (id, data, date) {
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/status/${id}/alert`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/status/${id}/alert`, {
                 mode: 'no-cors',
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
             });
 
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/status/${id}/_log/alert`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/status/${id}/_log/alert`, {
                 mode: 'no-cors',
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
@@ -320,14 +320,14 @@ export const post = {
     },
     history: {
         id: function (id, data, date) {
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/history/${id}`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/history/${id}`, {
                 mode: 'no-cors',
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
             });
 
-            // fetch(`http://localhost:5000/share-we-go-project/us-central1/api/history/${id}/_log`, {
+            // fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/history/${id}/_log`, {
             //     mode: 'no-cors',
             //     method: 'post',
             //     headers: { 'Content-Type': 'application/json' },
@@ -337,7 +337,7 @@ export const post = {
             //     })
             // });
 
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/status/${id}/owner`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/status/${id}/owner`, {
                 mode: 'no-cors',
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
@@ -348,7 +348,7 @@ export const post = {
                 })
             });
 
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/status/${id}/member`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/status/${id}/member`, {
                 mode: 'no-cors',
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
@@ -359,7 +359,7 @@ export const post = {
                 })
             });
 
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/status/${id}/_log/owner`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/status/${id}/_log/owner`, {
                 mode: 'no-cors',
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
@@ -373,7 +373,7 @@ export const post = {
                 })
             });
 
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/status/${id}/_log/member`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/status/${id}/_log/member`, {
                 mode: 'no-cors',
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
@@ -387,7 +387,7 @@ export const post = {
                 })
             });
 
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/share/${id}/member`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/share/${id}/member`, {
                 method: 'delete',
                 headers: { 'Content-Type': 'application/json' },
             });
@@ -402,7 +402,7 @@ export const get = {
     users: {
         all: function (id) {
 
-            return fetch(`http://localhost:5000/share-we-go-project/us-central1/api/users/${id}/all`).then(
+            return fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/users/${id}/all`).then(
                 function (res) {
                     return res.json();
                 }
@@ -410,7 +410,7 @@ export const get = {
         },
         id: function (id) {
 
-            return fetch(`http://localhost:5000/share-we-go-project/us-central1/api/users/${id}`).then(
+            return fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/users/${id}`).then(
                 function (res) {
                     return res.json();
                 }
@@ -418,7 +418,7 @@ export const get = {
         },
         profile: function (id) {
 
-            return fetch(`http://localhost:5000/share-we-go-project/us-central1/api/users/${id}/profile`).then(
+            return fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/users/${id}/profile`).then(
                 function (res) {
                     return res.json();
                 }
@@ -426,7 +426,7 @@ export const get = {
         },
         location: function (id) {
 
-            return fetch(`http://localhost:5000/share-we-go-project/us-central1/api/users/${id}/location`).then(
+            return fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/users/${id}/location`).then(
                 function (res) {
                     return res.json();
                 }
@@ -434,7 +434,7 @@ export const get = {
         },
         user: function (id) {
 
-            return fetch(`http://localhost:5000/share-we-go-project/us-central1/api/users/${id}/user`).then(
+            return fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/users/${id}/user`).then(
                 function (res) {
                     return res.json();
                 }
@@ -443,7 +443,7 @@ export const get = {
         log: {
             profile: function (id) {
 
-                return fetch(`http://localhost:5000/share-we-go-project/us-central1/api/users/${id}/_log/profile`).then(
+                return fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/users/${id}/_log/profile`).then(
                     function (res) {
                         return res.json();
                     }
@@ -451,7 +451,7 @@ export const get = {
             },
             location: function (id) {
 
-                return fetch(`http://localhost:5000/share-we-go-project/us-central1/api/users/${id}/_log/location`).then(
+                return fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/users/${id}/_log/location`).then(
                     function (res) {
                         return res.json();
                     }
@@ -459,7 +459,7 @@ export const get = {
             },
             user: function (id) {
 
-                return fetch(`http://localhost:5000/share-we-go-project/us-central1/api/users/${id}/_log/user`).then(
+                return fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/users/${id}/_log/user`).then(
                     function (res) {
                         return res.json();
                     }
@@ -470,7 +470,7 @@ export const get = {
     share: {
         all: function (id) {
 
-            return fetch(`http://localhost:5000/share-we-go-project/us-central1/api/share/all`).then(
+            return fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/share/all`).then(
                 function (res) {
                     return res.json();
                 }
@@ -478,7 +478,7 @@ export const get = {
         },
         id: function (id) {
 
-            return fetch(`http://localhost:5000/share-we-go-project/us-central1/api/share/${id}`).then(
+            return fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/share/${id}`).then(
                 function (res) {
                     return res.json();
                 }
@@ -486,7 +486,7 @@ export const get = {
         },
         location: function (id) {
 
-            return fetch(`http://localhost:5000/share-we-go-project/us-central1/api/share/${id}/location`).then(
+            return fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/share/${id}/location`).then(
                 function (res) {
                     return res.json();
                 }
@@ -494,7 +494,7 @@ export const get = {
         },
         date: function (id) {
 
-            return fetch(`http://localhost:5000/share-we-go-project/us-central1/api/share/${id}/date`).then(
+            return fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/share/${id}/date`).then(
                 function (res) {
                     return res.json();
                 }
@@ -502,7 +502,7 @@ export const get = {
         },
         max_number: function (id) {
 
-            return fetch(`http://localhost:5000/share-we-go-project/us-central1/api/share/${id}/max_number`).then(
+            return fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/share/${id}/max_number`).then(
                 function (res) {
                     return res.json();
                 }
@@ -510,7 +510,7 @@ export const get = {
         },
         sex: function (id) {
 
-            return fetch(`http://localhost:5000/share-we-go-project/us-central1/api/share/${id}/sex`).then(
+            return fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/share/${id}/sex`).then(
                 function (res) {
                     return res.json();
                 }
@@ -518,7 +518,7 @@ export const get = {
         },
         owner: function (id) {
 
-            return fetch(`http://localhost:5000/share-we-go-project/us-central1/api/share/${id}/owner`).then(
+            return fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/share/${id}/owner`).then(
                 function (res) {
                     return res.json();
                 }
@@ -526,7 +526,7 @@ export const get = {
         },
         member: function (id) {
 
-            return fetch(`http://localhost:5000/share-we-go-project/us-central1/api/share/${id}/member`).then(
+            return fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/share/${id}/member`).then(
                 function (res) {
                     return res.json();
                 }
@@ -534,7 +534,7 @@ export const get = {
         },
         alert: function (id) {
 
-            return fetch(`http://localhost:5000/share-we-go-project/us-central1/api/share/${id}/alert`).then(
+            return fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/share/${id}/alert`).then(
                 function (res) {
                     return res.json();
                 }
@@ -542,7 +542,7 @@ export const get = {
         },
         chat: function (id) {
 
-            return fetch(`http://localhost:5000/share-we-go-project/us-central1/api/share/${id}/chat`).then(
+            return fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/share/${id}/chat`).then(
                 function (res) {
                     return res.json();
                 }
@@ -551,7 +551,7 @@ export const get = {
         log: {
             location: function (id) {
 
-                return fetch(`http://localhost:5000/share-we-go-project/us-central1/api/share/${id}/location`).then(
+                return fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/share/${id}/location`).then(
                     function (res) {
                         return res.json();
                     }
@@ -559,7 +559,7 @@ export const get = {
             },
             date: function (id) {
 
-                return fetch(`http://localhost:5000/share-we-go-project/us-central1/api/share/${id}/date`).then(
+                return fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/share/${id}/date`).then(
                     function (res) {
                         return res.json();
                     }
@@ -567,7 +567,7 @@ export const get = {
             },
             max_number: function (id) {
 
-                return fetch(`http://localhost:5000/share-we-go-project/us-central1/api/share/${id}/max_number`).then(
+                return fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/share/${id}/max_number`).then(
                     function (res) {
                         return res.json();
                     }
@@ -575,7 +575,7 @@ export const get = {
             },
             sex: function (id) {
 
-                return fetch(`http://localhost:5000/share-we-go-project/us-central1/api/share/${id}/_log/sex`).then(
+                return fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/share/${id}/_log/sex`).then(
                     function (res) {
                         return res.json();
                     }
@@ -583,7 +583,7 @@ export const get = {
             },
             owner: function (id) {
 
-                return fetch(`http://localhost:5000/share-we-go-project/us-central1/api/share/${id}/_log/owner`).then(
+                return fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/share/${id}/_log/owner`).then(
                     function (res) {
                         return res.json();
                     }
@@ -591,7 +591,7 @@ export const get = {
             },
             member: function (id) {
 
-                return fetch(`http://localhost:5000/share-we-go-project/us-central1/api/share/${id}/_log/member`).then(
+                return fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/share/${id}/_log/member`).then(
                     function (res) {
                         return res.json();
                     }
@@ -599,7 +599,7 @@ export const get = {
             },
             chat: function (id) {
 
-                return fetch(`http://localhost:5000/share-we-go-project/us-central1/api/share/${id}/_log/chat`).then(
+                return fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/share/${id}/_log/chat`).then(
                     function (res) {
                         return res.json();
                     }
@@ -610,7 +610,7 @@ export const get = {
     status: {
         all: function () {
 
-            return fetch(`http://localhost:5000/share-we-go-project/us-central1/api/status/all`).then(
+            return fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/status/all`).then(
                 function (res) {
                     return res.json();
                 }
@@ -618,7 +618,7 @@ export const get = {
         },
         id: function (id) {
 
-            return fetch(`http://localhost:5000/share-we-go-project/us-central1/api/status/${id}`).then(
+            return fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/status/${id}`).then(
                 function (res) {
                     return res.json();
                 }
@@ -626,7 +626,7 @@ export const get = {
         },
         process: function (id) {
 
-            return fetch(`http://localhost:5000/share-we-go-project/us-central1/api/status/${id}/process`).then(
+            return fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/status/${id}/process`).then(
                 function (res) {
                     return res.json();
                 }
@@ -634,7 +634,7 @@ export const get = {
         },
         share: function (id) {
 
-            return fetch(`http://localhost:5000/share-we-go-project/us-central1/api/status/${id}/share`).then(
+            return fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/status/${id}/share`).then(
                 function (res) {
 
                     return res.json();
@@ -643,7 +643,7 @@ export const get = {
         },
         owner: function (id) {
 
-            return fetch(`http://localhost:5000/share-we-go-project/us-central1/api/status/${id}/owner`).then(
+            return fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/status/${id}/owner`).then(
                 function (res) {
                     return res.json();
                 }
@@ -651,7 +651,7 @@ export const get = {
         },
         member: function (id) {
 
-            return fetch(`http://localhost:5000/share-we-go-project/us-central1/api/status/${id}/member`).then(
+            return fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/status/${id}/member`).then(
                 function (res) {
                     return res.json();
                 }
@@ -659,7 +659,7 @@ export const get = {
         },
         alert: function (id) {
 
-            return fetch(`http://localhost:5000/share-we-go-project/us-central1/api/status/${id}/alert`).then(
+            return fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/status/${id}/alert`).then(
                 function (res) {
                     return res.json();
                 }
@@ -668,7 +668,7 @@ export const get = {
         log: {
             process: function (id) {
 
-                return fetch(`http://localhost:5000/share-we-go-project/us-central1/api/status/${id}/_log/process`).then(
+                return fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/status/${id}/_log/process`).then(
                     function (res) {
                         return res.json();
                     }
@@ -676,7 +676,7 @@ export const get = {
             },
             share: function (id) {
 
-                return fetch(`http://localhost:5000/share-we-go-project/us-central1/api/status/${id}/_log/share`).then(
+                return fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/status/${id}/_log/share`).then(
                     function (res) {
                         return res.json();
                     }
@@ -684,7 +684,7 @@ export const get = {
             },
             owner: function (id) {
 
-                return fetch(`http://localhost:5000/share-we-go-project/us-central1/api/status/${id}/_log/owner`).then(
+                return fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/status/${id}/_log/owner`).then(
                     function (res) {
                         return res.json();
                     }
@@ -692,7 +692,7 @@ export const get = {
             },
             member: function (id) {
 
-                return fetch(`http://localhost:5000/share-we-go-project/us-central1/api/status/${id}/_log/member`).then(
+                return fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/status/${id}/_log/member`).then(
                     function (res) {
                         return res.json();
                     }
@@ -700,7 +700,7 @@ export const get = {
             },
             alert: function (id) {
 
-                return fetch(`http://localhost:5000/share-we-go-project/us-central1/api/status/${id}/_log/alert`).then(
+                return fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/status/${id}/_log/alert`).then(
                     function (res) {
                         return res.json();
                     }
@@ -711,7 +711,7 @@ export const get = {
     history: {
         id: function (id) {
 
-            return fetch(`http://localhost:5000/share-we-go-project/us-central1/api/history/${id}`).then(
+            return fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/history/${id}`).then(
                 function (res) {
                     return res.json();
                 }
@@ -723,12 +723,12 @@ export const get = {
 export const d = {
     share: {
         id: function (id, uid, date) {
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/share/${id}/member`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/share/${id}/member`, {
                 method: 'delete',
                 headers: { 'Content-Type': 'application/json' },
             });
 
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/status/${uid}/member`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/status/${uid}/member`, {
                 mode: 'no-cors',
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
@@ -739,7 +739,7 @@ export const d = {
                 })
             });
 
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/status/${uid}/owner`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/status/${uid}/owner`, {
                 mode: 'no-cors',
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
@@ -750,7 +750,7 @@ export const d = {
                 })
             });
 
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/status/${uid}/_log/owner`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/status/${uid}/_log/owner`, {
                 mode: 'no-cors',
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
@@ -764,7 +764,7 @@ export const d = {
                 })
             });
 
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/status/${uid}/_log/member`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/status/${uid}/_log/member`, {
                 mode: 'no-cors',
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
@@ -782,12 +782,12 @@ export const d = {
 
         },
         member: function (id, uid, date) {
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/share/${id}/member/${uid}`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/share/${id}/member/${uid}`, {
                 method: 'delete',
                 headers: { 'Content-Type': 'application/json' },
             });
 
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/status/${uid}/member`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/status/${uid}/member`, {
                 mode: 'no-cors',
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
@@ -798,7 +798,7 @@ export const d = {
                 })
             });
 
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/status/${uid}/owner`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/status/${uid}/owner`, {
                 mode: 'no-cors',
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
@@ -809,7 +809,7 @@ export const d = {
                 })
             });
 
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/status/${uid}/_log/owner`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/status/${uid}/_log/owner`, {
                 mode: 'no-cors',
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
@@ -823,7 +823,7 @@ export const d = {
                 })
             });
 
-            fetch(`http://localhost:5000/share-we-go-project/us-central1/api/status/${uid}/_log/member`, {
+            fetch(`https://us-central1-share-we-go-project.cloudfunctions.net/api/status/${uid}/_log/member`, {
                 mode: 'no-cors',
                 method: 'post',
                 headers: { 'Content-Type': 'application/json' },
