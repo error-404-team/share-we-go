@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import { makeStyles } from '@material-ui/core/styles';
@@ -7,7 +7,7 @@ import Backdrop from '@material-ui/core/Backdrop';
 import Modal from '@material-ui/core/Modal';
 import Fade from '@material-ui/core/Fade';
 import Grid from '@material-ui/core/Grid';
-import { Button } from '@material-ui/core';
+import { Button, InputBase } from '@material-ui/core';
 import { post, d } from '../../../../../../RESTful_API'
 import { dateTime } from '../../../../../../module';
 
@@ -27,9 +27,15 @@ const useStyles = makeStyles(theme => ({
 
 const ModelExitShare = (props) => {
     const classes = useStyles();
+    const [report, setReport] = useState('')
 
     const removeShare = () => {
-        post.history.id(props.uid,props.share,dateTime);
+        post.history.id(props.uid, props.share, dateTime);
+        post.report.id(props.uid, {
+            uid: props.uid,
+            share_id: props.share_id,
+            report: report
+        }, dateTime)
 
         d.share.id(props.share_id, props.uid, dateTime);
 
@@ -37,6 +43,10 @@ const ModelExitShare = (props) => {
         //     props.history.goBack()
         // }, 3500)
 
+    }
+
+    const onChange = (e) => {
+        setReport(e.target.value)
     }
     return (
         <React.Fragment>
@@ -57,7 +67,17 @@ const ModelExitShare = (props) => {
                         <Grid container justify="center" alignItems="center" >
                             <center>
                                 <h1>คุณต้องการอยากจะออกจากกลุ่มแชร์</h1>
-
+                                {/* <p>ต้องการให้คำแนะนำ</p> */}
+                                <InputBase
+                                    placeholder="ต้องการให้คำแนะนำ"
+                                    style={{
+                                        backgroundColor: 'darkkhaki',
+                                        padding: '0px 10px'
+                                    }}
+                                    value={report}
+                                    onChange={onChange}
+                                ></InputBase>
+                                <br></br>
                                 <Button onClick={removeShare} >ตกลง</Button>
                             </center>
                         </Grid>
