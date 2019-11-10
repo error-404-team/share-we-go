@@ -64,9 +64,25 @@ export default function AlertCheck(props) {
       >
         <Fade in={props.open}>
           <div className={classes.paper}>
-            <h2 id="spring-modal-title">คุณได้ทำการเปิดการแชร์โลเคชันแล้ว</h2>
-            <p>กดปุ่ม ตกลง เพื่อเข้าสู้หน้าแรก</p>
-            <Link to='/'>ตกลง</Link>
+            
+            <h4 id="spring-modal-title">คุณได้ทำการเปิดการแชร์โลเคชันแล้ว</h4>
+            <center>
+            <p >กดปุ่ม ตกลง เพื่อเข้าสู้หน้าแรก</p>
+            <button style={{
+              backgroundColor: "#3f51b5",
+              color: "white",
+              padding: "15px 32px",
+              fontSize: "16px",
+              margin: "4px 2px",
+              border:"none",
+              borderRadius:'5px',
+              boxShadow:'0px 1px 5px 0px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14), 0px 3px 1px -2px rgba(0,0,0,0.12)'
+
+            }} >
+            <Link to='/' style={{color:"white",textDecorationLine:"none"}}>ตกลง</Link>
+            </button>
+            </center>
+            
           </div>
         </Fade>
       </Modal>
