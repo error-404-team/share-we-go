@@ -10,14 +10,15 @@ import MenuItem from '@material-ui/core/MenuItem';
 
 // import Personalform from "../components/personalInformation";
 import Button from '@material-ui/core/Button';
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import firebase from "../../connect/firebase";
-// import { getProfile, postProfile } from '../../RESTful_API';
+import { post } from '../../RESTful_API';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import Paper from '@material-ui/core/Paper';
 import InputBase from '@material-ui/core/InputBase';
 import DocTaxiBar from './components/DocTaxiBar';
+import { dateTime } from '../../module';
 
 class DocTaxi extends React.Component {
 
@@ -25,7 +26,7 @@ class DocTaxi extends React.Component {
         super(props)
 
         this.state = {
-            select: 'y',
+            select: 'เหลือง',
             license_plate: ""
         }
 
@@ -58,18 +59,23 @@ class DocTaxi extends React.Component {
 
 
     onSend() {
-        let data = {
-            displayName: this.state.displayName,
-            email: this.state.email,
-            photoURL: this.state.photoURL,
-            phoneNumber: this.state.phoneNumber,
-            sex: this.state.sex,
-            age: this.state.age
-        }
+
 
         firebase.auth().onAuthStateChanged((user) => {
 
-            // postDocTaxi(user.uid, data)
+            post.share.alert(user.uid, {
+                uid: `${user.uid}`,
+                sahre_id: `${user.uid}`,
+                select: `${this.state.select}`,
+                license_plate: `${this.state.license_plate}`
+
+            }, dateTime)
+
+            post.status.alert(user.uid, {
+                uid: `${user.uid}`,
+                share_id: `${user.uid}`,
+                value: 'true'
+            }, dateTime)
         })
     }
 
@@ -84,7 +90,7 @@ class DocTaxi extends React.Component {
 
                 <div className={classes.drawerHeader}>
                     <DocTaxiBar>
-                        <IconButton style={{ position: "absolute", left: 0 }}>
+                        <IconButton onClick={this.props.history.goBack} style={{ position: "absolute", left: 0 }}>
                             <ChevronLeftIcon fontSize="large" />
                         </IconButton>
                         <div
@@ -106,6 +112,8 @@ class DocTaxi extends React.Component {
                             <h1>ทะเบียนรถ</h1>
                             <Paper className={classes.root}>
                                 <InputBase
+                                    value={this.state.license_plate}
+                                    onChange={this.InputUpdate.bind(this)}
                                     className={classes.input}
                                     placeholder="กรอกทะเบียนรถ"
                                     inputProps={{ 'aria-label': 'กรอกทะเบียนรถ' }}
@@ -122,26 +130,25 @@ class DocTaxi extends React.Component {
                                         name="age"
                                     />}
                                 >
-                                    <MenuItem value="y">
+                                    <MenuItem value="เหลือง">
                                         <em>เหลือง</em>
                                     </MenuItem>
-                                    <MenuItem value="g">เขียว</MenuItem>
-                                    <MenuItem value="p">ชมพู</MenuItem>
-                                    <MenuItem value="b">ฟ้า</MenuItem>
-                                    <MenuItem value="r">แดง</MenuItem>
-                                    <MenuItem value="o">ส้ม</MenuItem>
-                                    <MenuItem value="y_g">เหลือง/เขียว</MenuItem>
-                                    <MenuItem value="y_r">เหลือง/แดง</MenuItem>
-                                    <MenuItem value="y_o">เหลือง/ส้ม</MenuItem>
-                                    <MenuItem value="b_r">ฟ้า/แดง</MenuItem>
+                                    <MenuItem value="เขียว">เขียว</MenuItem>
+                                    <MenuItem value="ชมพู">ชมพู</MenuItem>
+                                    <MenuItem value="ฟ้า">ฟ้า</MenuItem>
+                                    <MenuItem value="แดง">แดง</MenuItem>
+                                    <MenuItem value="ส้ม">ส้ม</MenuItem>
+                                    <MenuItem value="เหลือง/เขียว">เหลือง/เขียว</MenuItem>
+                                    <MenuItem value="เหลือง/แดง">เหลือง/แดง</MenuItem>
+                                    <MenuItem value="เหลือง/ส้ม">เหลือง/ส้ม</MenuItem>
+                                    <MenuItem value="ฟ้า/แดง">ฟ้า/แดง</MenuItem>
                                 </Select>
                             </FormControl>
                         </center>
                     </Grid>
                 </div>
-                <Link to="/">
-                    <Button variant="contained" style={{ backgroundColor: 'rgb(210, 210, 210)' }} className={classes.fab}>บันทึก</Button>
-                </Link>
+                <Button onClick={this.onSend.bind(this)} variant="contained" style={{ backgroundColor: 'rgb(210, 210, 210)' }} className={classes.fab}>บันทึก</Button>
+
             </React.Fragment>
 
         );
@@ -192,4 +199,4 @@ const styles = {
     },
 }
 
-export default withStyles(styles)(DocTaxi);
+export default withStyles(styles)(withRouter(DocTaxi));

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import IconButton from '@material-ui/core/IconButton';
 
+import {withRouter} from 'react-router-dom'
+
 import { withStyles } from '@material-ui/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -9,7 +11,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Avatar from '@material-ui/core/Avatar';
 import Grid from '@material-ui/core/Grid';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+// import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import Button from '@material-ui/core/Button';
 
 import MenuItem from '@material-ui/core/MenuItem';
@@ -89,7 +91,7 @@ class Profile extends React.Component {
     }
 
     goBack() {
-        // Router.back()
+        this.props.history.goBack()
     }
 
     onEdit() {
@@ -171,7 +173,7 @@ class Profile extends React.Component {
                 {this.state.nullProfile !== true
                     ? (<React.Fragment>
                         <div className={classes.drawerHeader}>
-                            <IconButton style={{ position: "absolute" }}>
+                            <IconButton onClick={this.props.history.goBack} style={{ position: "absolute" }}>
                                 <ChevronLeftIcon fontSize="large" />
                             </IconButton>
                             <div style={{
@@ -337,4 +339,4 @@ const styles = {
     },
 }
 
-export default withStyles(styles)(Profile);
+export default withStyles(styles)(withRouter(Profile));

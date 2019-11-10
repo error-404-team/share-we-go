@@ -6,14 +6,15 @@ import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
-import { postBaseShareLocation } from '../../../../RESTful_API';
+import { post } from '../../../../RESTful_API';
+import { dateTime } from '../../../../module';
 import firebase from '../../../../connect/firebase'
 // import io from 'socket.io-client';
 
 const useStyles = makeStyles(theme => ({
     root: {
         // display: 'flex',
-        marginTop: (window.innerHeight/2.5)
+        marginTop: (window.innerHeight / 2.5)
     },
     formControl: {
         margin: theme.spacing(3),
@@ -34,7 +35,7 @@ export default function RadioButtonsGroup() {
     }
 
     firebase.auth().onAuthStateChanged((user) => {
-        postBaseShareLocation(user.uid, { sex: value })
+        post.share.sex(user.uid, { value: value }, dateTime)
     })
     // socket.emit('gender', value)
 

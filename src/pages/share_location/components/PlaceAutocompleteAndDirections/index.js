@@ -1,7 +1,8 @@
 import React from 'react';
 import ConnectApiMaps, { Map } from 'maps-google-react';
-import { postBaseShareLocation } from '../../../../RESTful_API';
-import firebase from '../../../../connect/firebase'
+import { post } from '../../../../RESTful_API';
+import { dateTime } from '../../../../module';
+import firebase from '../../../../connect/firebase';
 import './styles/place-autocomplete-and-directions.css';
 
 
@@ -116,10 +117,10 @@ function PlaceAutocompleteAndDirections(props) {
             function (response, status) {
                 if (status === 'OK') {
                     me.directionsRenderer.setDirections(response);
-                    // console.log(response);
+                    console.log(response);
                     // socket.emit('origin_destination_route', response)
                     firebase.auth().onAuthStateChanged((user) => {
-                        postBaseShareLocation(user.uid, response)
+                        post.share.location(user.uid, response, dateTime)
                     })
 
                     console.log(response);
@@ -155,7 +156,7 @@ function PlaceAutocompleteAndDirections(props) {
                 marginTop: '100px',
                 position: "absolute",
                 overflow: "hidden",
-                height: (window.innerHeight-100),
+                height: (window.innerHeight - 100),
                 width: "100%",
             }}
             mapOptions={{
@@ -176,6 +177,10 @@ function PlaceAutocompleteAndDirections(props) {
                 // initMap(google, map)
                 //    setGoogle(google);
                 //    setMap(map)
+                console.log();
+
+                
+                
                 new AutocompleteDirectionsHandler(google, map);
             }}
         >
@@ -206,15 +211,15 @@ function PlaceAutocompleteAndDirections(props) {
                     style={{
                         borderRadius: '8px',
                     }}
-                     />
+                />
 
-                <div 
-                id="mode-selector" 
-                className="controls"
-                style={{
-                    borderRadius: '8px',
-                    marginRight: '10px'
-                }}
+                <div
+                    id="mode-selector"
+                    className="controls"
+                    style={{
+                        borderRadius: '8px',
+                        marginRight: '10px'
+                    }}
                 >
                     <input type="radio" name="type" id="changemode-walking" />
                     <label htmlFor="changemode-walking">Walking</label>
@@ -232,6 +237,6 @@ function PlaceAutocompleteAndDirections(props) {
 }
 
 export default ConnectApiMaps({
-    apiKey: "AIzaSyCfdx1_dkKY9BejzU-We23YqfEynZtAIJc",
+    apiKey: "AIzaSyBy2VY1e11qs-60Ul6aYT5klWYRI1K3RB0",
     libraries: ['places', 'geometry'],
 })(PlaceAutocompleteAndDirections)

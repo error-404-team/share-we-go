@@ -1,13 +1,16 @@
-import firebase from "firebase";
+import * as firebase from "firebase";
 
 const config = {
-    apiKey: "AIzaSyAavAERYgTafnnYxjIGaW9Xb7GaUdgSvLk",
-    authDomain: "share-we-go.firebaseapp.com",
-    databaseURL: "https://share-we-go.firebaseio.com",
-    projectId: "share-we-go",
-    storageBucket: "share-we-go.appspot.com",
-    messagingSenderId: "950367710306",
-    appId: "1:950367710306:web:219271895378fa7e"
+  apiKey: "AIzaSyBYlhJSaEBsfLWsb8tyPEoBnMdT-KvsFWA",
+  authDomain: "share-we-go-project.firebaseapp.com",
+  databaseURL: "https://share-we-go-project.firebaseio.com",
+  projectId: "share-we-go-project",
+  storageBucket: "share-we-go-project.appspot.com",
+  messagingSenderId: "556361690304",
+  appId: "1:556361690304:web:e67c6f6438f9e839d5d125",
+  measurementId: "G-ZPWZWZ8G9G"
+
+
 };
 
 if (!firebase.apps.length) {

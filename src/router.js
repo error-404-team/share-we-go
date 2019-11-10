@@ -39,11 +39,11 @@ export const routerPrivate = [
         page: () => (<ShareLocation />)
     },
     {
-        path: "/doc_taxi",
-        page: () => (<DocTaxi />)
-    },
-    {
         path: "/history",
         page: () => (<History />)
+    },
+    {
+        path: "/doc_taxi",
+        page: () => (<DocTaxi />)
     }
 ]

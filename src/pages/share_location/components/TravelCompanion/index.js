@@ -4,7 +4,8 @@ import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 // import FormHelperText from '@material-ui/core/FormHelperText';
 // import io from 'socket.io-client';
-import { postBaseShareLocation } from '../../../../RESTful_API';
+import { post } from '../../../../RESTful_API';
+import { dateTime } from '../../../../module';
 import firebase from '../../../../connect/firebase'
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
@@ -13,7 +14,7 @@ import FormLabel from '@material-ui/core/FormLabel';
 const useStyles = makeStyles(theme => ({
     root: {
         // display: 'flex',
-        marginTop: (window.innerHeight/2.5)
+        marginTop: (window.innerHeight / 2.5)
     },
     formControl: {
         margin: theme.spacing(3),
@@ -34,7 +35,7 @@ export default function RadioButtonsGroup() {
     }
 
     firebase.auth().onAuthStateChanged((user) => {
-        postBaseShareLocation(user.uid, { number_of_travel: value })
+        post.share.max_number(user.uid, { value: value }, dateTime)
     })
     // socket.emit('number_of_travel', { number_of_travel: value })
 
