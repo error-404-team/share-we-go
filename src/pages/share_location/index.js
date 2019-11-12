@@ -377,8 +377,9 @@ function ShareLocation(props) {
 
                                 <div>
                                     <div>
+                                        
                                     <body bgcolor="#6666FF">
-                                        <hr border="5"></hr>
+                                        <hr borderStyle="dotted"></hr>
                                        
                                         <h2>   <RecentActorsIcon></RecentActorsIcon>  ข้อมูลการแชร์</h2>
                                        
@@ -396,10 +397,10 @@ function ShareLocation(props) {
                                     </body>
                                     <body bgcolor="#EEEEEE">
                                      {location.end_address}
-                                    <hr></hr>
+                                    {/* <hr></hr> */}
                                      </body>
                                      <body bgcolor="#B4CFFc">
-                                     <h2>   <RecentActorsIcon></RecentActorsIcon>   เริ่ม - ปิด การแชร์</h2>
+                                     <b>   <RecentActorsIcon></RecentActorsIcon>   เริ่ม - ปิด การแชร์</b>
                                      </body>
 
                                     <body bgcolor="#EEEEEE">
