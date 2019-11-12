@@ -21,7 +21,13 @@ import CommuteIcon from '@material-ui/icons/Commute';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 // import GroupAddIcon from '@material-ui/icons/GroupAdd';
 import WcIcon from '@material-ui/icons/Wc';
+import TimerIcon from '@material-ui/icons/Timer';
+import EmojiPeopleIcon from '@material-ui/icons/EmojiPeople';
+import DriveEtaIcon from '@material-ui/icons/DriveEta';
+import TimerOffIcon from '@material-ui/icons/TimerOff';
+import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
 import { get } from '../../RESTful_API'
+
 
 
 
@@ -113,33 +119,33 @@ class History extends React.Component {
                                         <Typography style={{
                                             flexBasis: '33.33%',
                                             flexShrink: 0,
-                                        }}>เวลา: </Typography>
+                                        }}><b>เวลา</b>  </Typography>
                                         <Typography >{this.state.history[key].date.start_time.value}</Typography>
                                     </ExpansionPanelSummary>
                                     <div>
-                                        <center style={{ backgroundColor: 'darkgray' }}>
+                                        <center style={{ backgroundColor: '#B4CFFc' }}>
                                             <h4 style={{ padding: '10px' }}><CommuteIcon></CommuteIcon>ต้นทาง - ปลายทาง</h4>
                                         </center>
                                         <center>
-                                            <b><u>ต้นทาง:</u></b> {this.state.history[key].location.routes[0].legs[0].start_address}
+                                            <EmojiPeopleIcon></EmojiPeopleIcon><b><u>ต้นทาง:</u></b><br/> {this.state.history[key].location.routes[0].legs[0].start_address}
                                             <br></br>
-                                            <b><u>ปลายทาง:</u></b> {this.state.history[key].location.routes[0].legs[0].end_address}
+                                            <DriveEtaIcon></DriveEtaIcon> <b><u>ปลายทาง:</u></b> <br/> {this.state.history[key].location.routes[0].legs[0].end_address}
                                         </center>
-                                        <center style={{ backgroundColor: 'darkgray' }}>
+                                        <center style={{ backgroundColor: '#B4CFFc' }}>
                                             <h4 style={{ padding: '10px' }}>  <AccessTimeIcon></AccessTimeIcon>  เริ่มการแชร์ - ปิดการแชร์</h4>
                                         </center>
                                         <center>
-                                            <b><u>เริ่มการแชร์:</u></b> {this.state.history[key].date.start_time.value}
+                                            <TimerIcon></TimerIcon> <b><u>เริ่มการแชร์:</u></b> {this.state.history[key].date.start_time.value}
                                             <br></br>
-                                            <b><u>ปิดการแชร์:</u></b> {this.state.history[key].date.end_time.value}
+                                             <TimerOffIcon></TimerOffIcon> <b><u>ปิดการแชร์:</u></b> {this.state.history[key].date.end_time.value}
                                             <br></br>
                                         </center>
-                                        <center style={{ backgroundColor: 'darkgray' }}>
+                                        <center style={{ backgroundColor: '#B4CFFc' }}>
                                             <h4 style={{ padding: '10px' }}><WcIcon></WcIcon>ผู้ร่วมเดินทาง - เพศผู้ร่วมเดินทาง</h4>
                                         </center>
                                         <center>
-                                            <b><u>ต้องการผู้ร่วมเดินทางเพิ่ม:</u> </b>{Object.keys(this.state.history[key].member).length}/{this.state.history[key].max_number.value} คน<br />
-                                            <b><u>ต้องการร่วมเดินทางกับเพศ:</u> </b> {this.state.history[key].sex.value}
+                                            <PeopleAltIcon></PeopleAltIcon> <b><u>ต้องการผู้ร่วมเดินทางเพิ่ม:</u> </b>{Object.keys(this.state.history[key].member).length}/{this.state.history[key].max_number.value} คน<br />
+                                            <WcIcon></WcIcon> <b><u>ต้องการร่วมเดินทางกับเพศ:</u> </b> {this.state.history[key].sex.value}
                                         </center>
                                         <br />
                                     </div>
