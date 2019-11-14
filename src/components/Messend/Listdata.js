@@ -98,7 +98,7 @@ class ListData extends React.Component {
                                                 }}>
                                                     <Chip
                                                         key={key}
-                                                        avatar={<Avatar alt="Natacha" src={listMsg[key].photoURL} />}
+                                                        avatar={<Avatar alt="Natacha" src= {listMsg[key].photoURL} />}
                                                         label={(
                                                             <div>
                                                                 <h3>{listMsg[key].displayName}</h3>
