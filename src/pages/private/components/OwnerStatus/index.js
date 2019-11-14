@@ -289,12 +289,14 @@ const OwnerStatus = (props) => {
                         bottom: '80px',
 
                     }} >
-                        <Fab size="medium" onClick={onCallTaxi} aria-label="add" className={classes.buttonTaxi}>
+                        <Fab style={{border:'1px solid black'}} size="medium" onClick={onCallTaxi} aria-label="add" className={classes.buttonTaxi}>
                             <LocalTaxiIcon />
                         </Fab>
-                        <Fab size="medium" onClick={onChatSlide} color="secondary" aria-label="add" className={classes.buttonChat}>
+                        <b>เรียกรถ</b>
+                        <Fab style={{border:'1px solid black'}} size="medium" onClick={onChatSlide} color="secondary" aria-label="add" className={classes.buttonChat}>
                             <QuestionAnswerIcon />
                         </Fab>
+                        <b>ข้อความ</b>
                         <CallTaxiModal
                             uid={props.status.uid}
                             open={openCallTaxi}
@@ -309,9 +311,11 @@ const OwnerStatus = (props) => {
                                 bottom: '80px',
 
                             }} >
-                                <Fab size="medium" onClick={exitShareGroup} aria-label="exit-share" className={classes.buttonExitShare}>
-                                    <MeetingRoomIcon />
+                                <Fab style={{backgroundColor:'red'}} style={{border:'1px solid black'}} size="medium" onClick={exitShareGroup} aria-label="exit-share" className={classes.buttonExitShare}>
+                                <b>Exit</b>
+                                    
                                 </Fab>
+                                    
                             </Grid>
                             <Button variant="contained" onClick={startShareGroup} style={{ backgroundColor: '#ffffff' }} className={classes.fab}>
                                 เริ่มการเดินทาง

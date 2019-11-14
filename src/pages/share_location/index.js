@@ -377,30 +377,36 @@ function ShareLocation(props) {
 
                                 <div>
                                     <div>
+                                          <body bgcolor="#6666FF">
+                                    {/* <body bgcolor="#6666FF"> */}
+                                        {/* <hr borderStyle="dotted"></hr> */}
                                         
-                                    <body bgcolor="#6666FF">
-                                        <hr borderStyle="dotted"></hr>
-                                       
-                                        <h2>   <RecentActorsIcon></RecentActorsIcon>  ข้อมูลการแชร์</h2>
+                                        <h2 style={{border:'1px solid black'}}>   <RecentActorsIcon></RecentActorsIcon>  ข้อมูลการแชร์</h2>
                                        
                                     </body>
                                     </div>
-                                    <body bgcolor="#B4CFFc">
+                                    <body bgcolor="#B4CFFc"
+                                          style={{border:'1px solid black'}}
+                                    >
                                     <b>ต้นทาง</b> <EmojiPeopleIcon></EmojiPeopleIcon> 
                                     </body>
                                     
                                     <body bgcolor="#EEEEEE">
                                     {location.start_address}
                                     </body>
-                                    <body bgcolor="#B4CFFc">
+                                    <body bgcolor="#B4CFFc"
+                                          style={{border:'1px solid black'}}                                    
+                                    >
                                     <b>ปลายทาง</b> <DriveEtaIcon></DriveEtaIcon> 
                                     </body>
                                     <body bgcolor="#EEEEEE">
                                      {location.end_address}
                                     {/* <hr></hr> */}
                                      </body>
-                                     <body bgcolor="#B4CFFc">
-                                     <b>   <RecentActorsIcon></RecentActorsIcon>   เริ่ม - ปิด การแชร์</b>
+                                     <body bgcolor="#B4CFFc"
+                                           style={{border:'1px solid black'}}
+                                     >
+                                     <b>เริ่ม - ปิด การแชร์</b>  <RecentActorsIcon></RecentActorsIcon> 
                                      </body>
 
                                     <body bgcolor="#EEEEEE">

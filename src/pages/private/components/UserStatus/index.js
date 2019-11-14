@@ -419,8 +419,8 @@ const UserStatus = (props) => {
                     </SearchBar>
                     <VisibilityButton open={openVisibility} on={onVisibility.bind(this)} off={offVisibility.bind(this)} />
                     <Link to="/share_location">
-                        <Button onClick={onCreateShare.bind(this)} variant="contained" style={{ backgroundColor: '#ffffff' }} className={props.classes.fab}>
-                            <AddIcon color="action" fontSize="large" />
+                        <Button onClick={onCreateShare.bind(this)} variant="contained" style={{ backgroundColor: '#3f51b5' }} className={props.classes.fab}>
+                            <h3 style={{position:'fixed',top:'90%',color:'white'}}>สร้างการแชร์</h3>
                         </Button>
                     </Link>
                 </Map>
