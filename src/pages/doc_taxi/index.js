@@ -128,11 +128,9 @@ class DocTaxi extends React.Component {
                                     input={<InputBase
                                         id="age-customized-native-simple"
                                         name="age"
-                                    />}
-                                >
-                                    <MenuItem value="เหลือง">
-                                    <MenuItem style={{backgroundColor:'#ffff4d'}}>เหลือง</MenuItem>
-                                    </MenuItem>
+                                    />}>
+                                    <MenuItem value="เหลือง"><MenuItem style={{backgroundColor:'#ffff4d'}}>เห</MenuItem></MenuItem>
+                                    {/* <MenuItem  value="เลือก" placeholder="โปรเลือกสีรถ">โปรเลือกสีรถ</MenuItem> */}
                                     <MenuItem value="เขียว"><MenuItem style={{backgroundColor:'#009900'}}>เขียว</MenuItem></MenuItem>
                                     <MenuItem value="ชมพู"><MenuItem style={{backgroundColor:'#ff0080'}}>ชมพู</MenuItem></MenuItem>
                                     <MenuItem value="ฟ้า"><MenuItem style={{backgroundColor:'#0066ff'}}>ฟ้า</MenuItem></MenuItem>
@@ -141,6 +139,7 @@ class DocTaxi extends React.Component {
                                     <MenuItem value="เหลือง/เขียว" ><MenuItem style={{backgroundColor:'#ffff4d'}}>เหลือง</MenuItem><MenuItem style={{backgroundColor:'#009900'}}>เขียว</MenuItem></MenuItem>
                                     <MenuItem value="เหลือง/แดง"><MenuItem style={{backgroundColor:'#ffff4d'}}>เหลือง</MenuItem><MenuItem style={{backgroundColor:'#ff0000'}}>แดง</MenuItem></MenuItem>
                                     <MenuItem value="เหลือง/ส้ม"><MenuItem style={{backgroundColor:'#ffff4d'}}>เหลือง</MenuItem><MenuItem style={{backgroundColor:'#ff6600'}}>ส้ม</MenuItem></MenuItem>
+                                    <MenuItem value="เหลือง"><MenuItem style={{color:'#fffff'}}>โปรดเลือกสีรถ</MenuItem></MenuItem>
                                     <MenuItem value="ฟ้า/แดง"><MenuItem style={{backgroundColor:'#0066ff'}}>ฟ้า</MenuItem><MenuItem style={{backgroundColor:'#ff0000'}}>แดง</MenuItem></MenuItem>
                                 </Select>
                             </FormControl>
