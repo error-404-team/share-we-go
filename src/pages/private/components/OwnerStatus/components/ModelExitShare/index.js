@@ -66,7 +66,7 @@ const ModelExitShare = (props) => {
                     <div className={classes.paper}>
                         <Grid container justify="center" alignItems="center" >
                             <center>
-                                <h1>คุณต้องการอยากจะออกจากกลุ่มแชร์</h1>
+                                <h3>คุณต้องการอยากจะออกจากกลุ่มแชร์</h3>
                                 {/* <p>ต้องการให้คำแนะนำ</p> */}
                                 <InputBase
                                     placeholder="ต้องการให้คำแนะนำ"
@@ -78,7 +78,7 @@ const ModelExitShare = (props) => {
                                     onChange={onChange}
                                 ></InputBase>
                                 <br></br>
-                                <Button onClick={removeShare} >ตกลง</Button>
+                                <Button onClick={removeShare} style={{border:'0px',backgroundColor:'#3f51b5',padding:'inherit',color:'white',bordeRadius:'4px',width:'100%'}} >ตกลง</Button>
                             </center>
                         </Grid>
                     </div>
