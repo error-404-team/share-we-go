@@ -23,12 +23,17 @@ import { Link, withRouter } from 'react-router-dom';
 import CommuteIcon from '@material-ui/icons/Commute';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import RecentActorsIcon from '@material-ui/icons/RecentActors';
-
+import DriveEtaIcon from '@material-ui/icons/DriveEta';
+import EmojiPeopleIcon from '@material-ui/icons/EmojiPeople';
 import firebase from '../../connect/firebase';
 import { post, get } from '../../RESTful_API';
 import { dateTime } from '../../module';
 import { setDate } from 'date-fns';
 import AlertCheck from './components/AlertCheck';
+import TimerIcon from '@material-ui/icons/Timer';
+import TimerOffIcon from '@material-ui/icons/TimerOff';
+import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
+import WcIcon from '@material-ui/icons/Wc';
 
 
 require('es6-promise').polyfill();
@@ -368,25 +373,47 @@ function ShareLocation(props) {
                         <br />
                         <div bgcolor="#DCDCDC">
                             <center>
-                                <hr border="5" shadow="5" />
+                                
 
                                 <div>
                                     <div>
-                                        <h2><CommuteIcon align></CommuteIcon> ต้นทาง - ปลายทาง</h2>
+                                        
+                                    <body bgcolor="#6666FF">
+                                        <hr borderStyle="dotted"></hr>
+                                       
+                                        <h2>   <RecentActorsIcon></RecentActorsIcon>  ข้อมูลการแชร์</h2>
+                                       
+                                    </body>
                                     </div>
-                                    <b>ต้นทาง:</b> {location.start_address}
+                                    <body bgcolor="#B4CFFc">
+                                    <b>ต้นทาง</b> <EmojiPeopleIcon></EmojiPeopleIcon> 
+                                    </body>
+                                    
+                                    <body bgcolor="#EEEEEE">
+                                    {location.start_address}
+                                    </body>
+                                    <body bgcolor="#B4CFFc">
+                                    <b>ปลายทาง</b> <DriveEtaIcon></DriveEtaIcon> 
+                                    </body>
+                                    <body bgcolor="#EEEEEE">
+                                     {location.end_address}
+                                    {/* <hr></hr> */}
+                                     </body>
+                                     <body bgcolor="#B4CFFc">
+                                     <b>   <RecentActorsIcon></RecentActorsIcon>   เริ่ม - ปิด การแชร์</b>
+                                     </body>
+
+                                    <body bgcolor="#EEEEEE">
+                                    <TimerIcon></TimerIcon> <b>เริ่มการแชร์:</b> {date.start_time}
                                     <br />
-                                    <b>ปลายทาง:</b> {location.end_address}
+                                    <TimerOffIcon></TimerOffIcon> <b>ปิดการแชร์:</b> {date.end_time}
                                     <br />
-                                    <h2><RecentActorsIcon></RecentActorsIcon> ข้อมูลการแชร์</h2>
-                                    <b>เริ่มการแชร์:</b> {date.start_time}
+                                    <PeopleAltIcon></PeopleAltIcon> <b>ต้องการผู้ร่วมเดินทางเพิ่ม:</b> {max_number.value} คน
                                     <br />
-                                    <b>ปิดการแชร์:</b> {date.end_time}
-                                    <br />
-                                    <b>ต้องการผู้ร่วมเดินทางเพิ่ม:</b> {max_number.value} คน
-                                    <br />
-                                    <b>ต้องการร่วมเดินทางกับเพศ: {sex.value}</b>
-                                    <hr border="5" shadow="5" />
+                                    <WcIcon></WcIcon> <b>ต้องการร่วมเดินทางกับเพศ: {sex.value}</b>
+                                    <br/>
+                                    <hr border="5"></hr>
+                                    </body>
                                 </div>
                             </center>
                         </div>

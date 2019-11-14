@@ -51,11 +51,11 @@ class Profile extends React.Component {
                 },
                 {
                     value: 1,
-                    label: 'Man',
+                    label: 'ชาย',
                 },
                 {
                     value: 2,
-                    label: 'Women',
+                    label: 'หญิง',
                 }
             ],
             match: this.props.match,
