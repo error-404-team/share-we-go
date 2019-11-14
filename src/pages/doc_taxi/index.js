@@ -131,17 +131,17 @@ class DocTaxi extends React.Component {
                                     />}
                                 >
                                     <MenuItem value="เหลือง">
-                                        <em>เหลือง</em>
+                                    <MenuItem style={{backgroundColor:'#ffff4d'}}>เหลือง</MenuItem>
                                     </MenuItem>
-                                    <MenuItem value="เขียว">เขียว</MenuItem>
-                                    <MenuItem value="ชมพู">ชมพู</MenuItem>
-                                    <MenuItem value="ฟ้า">ฟ้า</MenuItem>
-                                    <MenuItem value="แดง">แดง</MenuItem>
-                                    <MenuItem value="ส้ม">ส้ม</MenuItem>
-                                    <MenuItem value="เหลือง/เขียว">เหลือง/เขียว</MenuItem>
-                                    <MenuItem value="เหลือง/แดง">เหลือง/แดง</MenuItem>
-                                    <MenuItem value="เหลือง/ส้ม">เหลือง/ส้ม</MenuItem>
-                                    <MenuItem value="ฟ้า/แดง">ฟ้า/แดง</MenuItem>
+                                    <MenuItem value="เขียว"><MenuItem style={{backgroundColor:'#009900'}}>เขียว</MenuItem></MenuItem>
+                                    <MenuItem value="ชมพู"><MenuItem style={{backgroundColor:'#ff0080'}}>ชมพู</MenuItem></MenuItem>
+                                    <MenuItem value="ฟ้า"><MenuItem style={{backgroundColor:'#0066ff'}}>ฟ้า</MenuItem></MenuItem>
+                                    <MenuItem value="แดง"><MenuItem style={{backgroundColor:'#ff0000'}}>แดง</MenuItem></MenuItem>
+                                    <MenuItem value="ส้ม"><MenuItem style={{backgroundColor:'#ff6600'}}>ส้ม</MenuItem></MenuItem>
+                                    <MenuItem value="เหลือง/เขียว" ><MenuItem style={{backgroundColor:'#ffff4d'}}>เหลือง</MenuItem><MenuItem style={{backgroundColor:'#009900'}}>เขียว</MenuItem></MenuItem>
+                                    <MenuItem value="เหลือง/แดง"><MenuItem style={{backgroundColor:'#ffff4d'}}>เหลือง</MenuItem><MenuItem style={{backgroundColor:'#ff0000'}}>แดง</MenuItem></MenuItem>
+                                    <MenuItem value="เหลือง/ส้ม"><MenuItem style={{backgroundColor:'#ffff4d'}}>เหลือง</MenuItem><MenuItem style={{backgroundColor:'#ff6600'}}>ส้ม</MenuItem></MenuItem>
+                                    <MenuItem value="ฟ้า/แดง"><MenuItem style={{backgroundColor:'#0066ff'}}>ฟ้า</MenuItem><MenuItem style={{backgroundColor:'#ff0000'}}>แดง</MenuItem></MenuItem>
                                 </Select>
                             </FormControl>
                         </center>
